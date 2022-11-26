@@ -85,4 +85,49 @@ class Ping
 		});
 		return $filtered->count() > 0;
 	}
+	
+	public function checkSRV($host, $val)
+	{
+		$this->dns = collect(dns_get_record($host, DNS_SRV));
+		$filtered = $this->dns->filter(function($item, $key) use($val) {
+			return $item['target'] === $val;
+		});
+		return $filtered->count() > 0;
+	}
+	
+        public function checkPTR($host, $val)
+	{
+		$this->dns = collect(dns_get_record($host, DNS_PTR));
+		$filtered = $this->dns->filter(function($item, $key) use($val) {
+			return $item['target'] === $val;
+		});
+		return $filtered->count() > 0;
+	}
+	
+        public function checkSOA($host, $val)
+	{
+		$this->dns = collect(dns_get_record($host, DNS_SOA));
+		$filtered = $this->dns->filter(function($item, $key) use($val) {
+			return $item['target'] === $val;
+		});
+		return $filtered->count() > 0;
+	}
+	
+        public function checkTXT($host, $val)
+	{
+		$this->dns = collect(dns_get_record($host, DNS_TXT));
+		$filtered = $this->dns->filter(function($item, $key) use($val) {
+			return $item['target'] === $val;
+		});
+		return $filtered->count() > 0;
+	}
+	
+        public function checkAAAA($host, $val)
+	{
+		$this->dns = collect(dns_get_record($host, DNS_AAAA));
+		$filtered = $this->dns->filter(function($item, $key) use($val) {
+			return $item['target'] === $val;
+		});
+		return $filtered->count() > 0;
+	}
 }
