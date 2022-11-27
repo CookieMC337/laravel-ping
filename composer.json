@@ -1,5 +1,5 @@
 {
-  "name": "cookiemc337/laravel-ping",
+  "name": "cookiemc337/laravel-web-status-checker",
   "description": "Simple Ping For Laravel Applications",
   "license": "MIT",
   "authors": [
@@ -22,10 +22,10 @@
    "extra": {
     "laravel": {
       "providers": [
-        "Karlmonson\\Ping\\PingServiceProvider"
+        "Karlmonson\\Ping\\WebStatusCheckerServiceProvider"
       ],
       "aliases": {
-        "Ping": "Karlmonson\\Ping\\Facades\\Ping"
+        "Ping": "Karlmonson\\Ping\\Facades\\WebStatusChecker"
       }
     }
   }
