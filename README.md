@@ -6,20 +6,21 @@ This Laravel package is simple and unopinionated. It simply returns the HTTP Sta
 
 Install via Composer:
 ```bash
-composer require karlmonson/laravel-ping
+composer require cookiemc337/laravel-web-status-checker
 ```
 You'll need to register the ServiceProvider and Facade:
+
 ```php
 // config/app.php
 
 'providers' => [
     // ...
-    Karlmonson\Ping\PingServiceProvider::class,
+    CookieMC337\Checker\WebStatusCheckerServiceProvider::class,
 ];
 
 'aliases' => [
     // ...
-    'Ping' => Karlmonson\Ping\Facades\Ping::class,
+    'WebStatusChecker' => CookieMC337\Checker\Facades\WebStatusChecker::class,
 ];
 ```
 
@@ -57,6 +58,7 @@ class LinkController extends Controller
 ## Credits
 
 - [Karl Monson](https://github.com/karlmonson) - Author
+- [Julien  Herwig](https://github.com/karlmonson) - Renamed and added more Checks
 - [Eric Blount](https://github.com/ericmakesstuff) - Inspiration ([ericmakesstuff/laravel-server-monitor](https://github.com/ericmakesstuff/laravel-server-monitor))
 
 ## License

@@ -1,10 +1,10 @@
 <?php
 
-namespace Karlmonson\Ping\Facades;
+namespace CookieMC337\Checker\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Ping extends Facade
+class WebStatusChecker extends Facade
 {
     /**
      * Get the registered name of the component.

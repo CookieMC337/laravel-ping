@@ -1,10 +1,10 @@
 <?php
 
-namespace Karlmonson\Ping;
+namespace CookieMC337\Checker;
 
 use Illuminate\Support\ServiceProvider;
 
-class PingServiceProvider extends ServiceProvider
+class WebStatusCheckerServiceProvider extends ServiceProvider
 {
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -21,7 +21,7 @@ class PingServiceProvider extends ServiceProvider
 	public function register()
 	{
 		$this->app->singleton('ping', function ($app) {
-			return new Ping();
+			return new WebStatusChecker();
 		});
 	}
 

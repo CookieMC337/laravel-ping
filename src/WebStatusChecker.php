@@ -1,13 +1,13 @@
 <?php
 
-namespace Karlmonson\Ping;
+namespace CookieMC337\Checker;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ConnectException;
 use GuzzleHttp\Exception\ServerException;
 
-class Ping
+class WebStatusChecker
 {
 	/**
 	 * @var \GuzzleHttp\Client

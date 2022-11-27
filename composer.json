@@ -8,6 +8,12 @@
       "email": "karl@karlmonson.com",
       "homepage": "https://github.com/karlmonson",
       "role": "Developer"
+    },
+    {
+      "name": "Julien Herwig",
+      "email": "info@cookiemc.de",
+      "homepage": "https://github.com/cookiemc337",
+      "role": "Developer"
     }
   ],
   "autoload": {
@@ -22,10 +28,10 @@
    "extra": {
     "laravel": {
       "providers": [
-        "Karlmonson\\Ping\\WebStatusCheckerServiceProvider"
+        "CookieMC337\\Checker\\WebStatusCheckerServiceProvider"
       ],
       "aliases": {
-        "Ping": "Karlmonson\\Ping\\Facades\\WebStatusChecker"
+        "Ping": "CookieMC337\\Checker\\Facades\\WebStatusChecker"
       }
     }
   }
